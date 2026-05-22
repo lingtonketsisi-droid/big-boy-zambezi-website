@@ -1,0 +1,142 @@
+.productLayout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  margin-bottom: 6rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.breadcrumb a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+.breadcrumb a:first-child {
+  margin-left: 0;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-red);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-family: var(--font-racing);
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent-red);
+  font-family: var(--font-racing);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.disclaimer {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-left: 4px solid #ddd;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.enquireBtn {
+  background-color: var(--accent-red);
+  color: white;
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 900;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.enquireBtn:hover {
+  transform: scale(1.02);
+}
+
+.callBtn {
+  border: 2px solid #000;
+  color: #000;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.callBtn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.related {
+  border-top: 1px solid #eee;
+  padding-top: 4rem;
+}
+
+.relatedTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  font-family: var(--font-racing);
+  font-style: italic;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.relatedGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .productLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .relatedGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .relatedGrid {
+    grid-template-columns: 1fr;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
+}

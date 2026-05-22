@@ -1,0 +1,244 @@
+.hero {
+  background: linear-gradient(135deg, #0e0e0e 0%, #1c1c1c 70%, #4a0d10 100%);
+  color: #fff;
+  padding: 5rem 0 4.5rem;
+}
+
+.heroLabel {
+  display: inline-block;
+  color: var(--accent-red);
+  font-family: var(--font-racing);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.heroTitle span {
+  color: var(--accent-red);
+}
+
+.heroSubtitle {
+  color: #ddd;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 720px;
+  margin-top: 1.25rem;
+}
+
+.section {
+  padding: 5rem 0;
+  background: #fdfdfd;
+}
+
+.sectionTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  line-height: 1;
+}
+
+.sectionTitleLight {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.85rem, 3.5vw, 2.5rem);
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  line-height: 1;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.intro p {
+  color: #444;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.list li {
+  padding-left: 1.25rem;
+  position: relative;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 7px;
+  height: 7px;
+  background: var(--accent-red);
+  transform: rotate(45deg);
+}
+
+.values {
+  background: #111;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.valueCard {
+  background: #1a1a1a;
+  border-left: 4px solid var(--accent-red);
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.valueNumber {
+  display: block;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--accent-red);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.valueCard h3 {
+  margin: 0.75rem 0 0.6rem;
+  font-size: 1.05rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.valueCard p {
+  color: #bbb;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.visit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.lead {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.contactList {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contactList > div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed #ddd;
+}
+
+.contactList dt {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactList dd {
+  color: #222;
+  line-height: 1.55;
+}
+
+.contactList a {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.whatsappBtn,
+.outlineBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #fff;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.whatsappBtn:hover {
+  background: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.outlineBtn {
+  background: transparent;
+  color: var(--accent-red);
+  border: 2px solid var(--accent-red);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.outlineBtn:hover {
+  background: var(--accent-red);
+  color: #fff;
+}
+
+.mapWrap {
+  width: 100%;
+  height: 420px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .intro,
+  .visit {
+    grid-template-columns: 1fr;
+  }
+}

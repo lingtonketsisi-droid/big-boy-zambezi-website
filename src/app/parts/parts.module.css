@@ -1,0 +1,183 @@
+.hero {
+  background: linear-gradient(135deg, #0e0e0e 0%, #1c1c1c 70%, #4a0d10 100%);
+  color: #fff;
+  padding: 5rem 0 4.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroLabel {
+  display: inline-block;
+  color: var(--accent-red);
+  font-family: var(--font-racing);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.heroTitle span {
+  color: var(--accent-red);
+}
+
+.heroSubtitle {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-top: 1.25rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.whatsappBtn,
+.callBtn,
+.outlineBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #fff;
+}
+
+.whatsappBtn:hover {
+  background: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.callBtn,
+.outlineBtn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.callBtn:hover,
+.outlineBtn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.section {
+  padding: 5rem 0;
+  background: #fdfdfd;
+}
+
+.sectionTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.sectionLead {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.sectionLeadDark {
+  color: #ddd;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top: 4px solid var(--accent-red);
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.cardTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 0.75rem;
+}
+
+.card ul {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.card li {
+  color: #555;
+  font-size: 0.92rem;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-red);
+  transform: rotate(45deg);
+}
+
+.findPart {
+  background: #111;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.findPart .sectionTitle {
+  color: #fff;
+}
+
+.findPartInner {
+  max-width: 800px;
+}

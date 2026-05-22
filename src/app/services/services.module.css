@@ -1,0 +1,257 @@
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #0e0e0e 0%, #1c1c1c 70%, #4a0d10 100%);
+  color: #fff;
+  padding: 5rem 0 4.5rem;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(255,255,255,0.03) 0,
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px,
+    transparent 12px
+  );
+  pointer-events: none;
+}
+
+.heroLabel {
+  display: inline-block;
+  color: var(--accent-red);
+  font-family: var(--font-racing);
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+.heroTitle span {
+  color: var(--accent-red);
+}
+
+.heroSubtitle {
+  color: #ddd;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 660px;
+  margin-top: 1.25rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.whatsappBtn,
+.callBtn,
+.outlineBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.6rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #fff;
+}
+
+.whatsappBtn:hover {
+  background: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.callBtn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.callBtn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.outlineBtn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.outlineBtn:hover {
+  background: #fff;
+  color: var(--accent-red);
+}
+
+.section {
+  padding: 5rem 0;
+  background: #fdfdfd;
+}
+
+.sectionTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.sectionLead {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top: 4px solid var(--accent-red);
+  padding: 1.75rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.cardTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 0.65rem;
+}
+
+.cardBody {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.process {
+  background: #111;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.process .sectionTitle {
+  color: #fff;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.step {
+  background: #1a1a1a;
+  border-left: 4px solid var(--accent-red);
+  padding: 1.5rem 1.5rem 1.75rem;
+}
+
+.stepNumber {
+  display: block;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--accent-red);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.step h3 {
+  margin: 0.75rem 0 0.6rem;
+  font-size: 1.1rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.step p {
+  color: #bbb;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.ctaBanner {
+  background: linear-gradient(135deg, var(--accent-red) 0%, #8d1117 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 0;
+}
+
+.ctaTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.ctaSubtext {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBanner .outlineBtn {
+  border-color: #fff;
+}
+.ctaBanner .outlineBtn:hover {
+  background: #fff;
+  color: var(--accent-red);
+}

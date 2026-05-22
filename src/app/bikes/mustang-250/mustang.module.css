@@ -1,0 +1,374 @@
+.heroBg {
+  background: linear-gradient(180deg, #0e0e0e 0%, #1a1a1a 100%);
+  color: #fff;
+  padding: 2.5rem 0 4rem;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: #999;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb a {
+  color: #ccc;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-red);
+}
+
+.breadcrumb .current {
+  color: #fff;
+  font-weight: 700;
+}
+
+.productLayout {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.imageSection {
+  position: relative;
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #fff;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandLabel {
+  font-family: var(--font-racing);
+  font-size: 0.85rem;
+  letter-spacing: 0.3em;
+  color: var(--accent-red);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.title {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+  color: #fff;
+}
+
+.categoryLabel {
+  display: inline-block;
+  background: rgba(255,255,255,0.08);
+  color: #ddd;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  margin-top: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.price {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--accent-red);
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.stockBadge {
+  display: inline-block;
+  background: #1f8a3f;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.tagline {
+  color: #ddd;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 1.25rem;
+}
+
+.highlights {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.highlights li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-red);
+  transform: rotate(45deg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+
+.primaryBtn,
+.whatsappBtn,
+.callBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  border-radius: 0;
+}
+
+.primaryBtn {
+  background: var(--accent-red);
+  color: #fff;
+}
+
+.primaryBtn:hover {
+  background: var(--accent-red-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #fff;
+}
+
+.whatsappBtn:hover {
+  background: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.callBtn {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.callBtn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.disclaimer {
+  color: #888;
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+.sectionDark {
+  background: #0e0e0e;
+  color: #fff;
+}
+
+.sectionTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--accent-red);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  line-height: 1;
+}
+
+.sectionDark .sectionTitle {
+  color: #fff;
+}
+
+.descriptionGrid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.descriptionText p {
+  color: #333;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+}
+
+.ataGlance {
+  background: #f6f6f6;
+  border-left: 4px solid var(--accent-red);
+  padding: 1.75rem 1.5rem;
+}
+
+.ataGlance h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  color: #111;
+}
+
+.ataGlance dl {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.ataGlance dl > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 0.65rem;
+  gap: 1rem;
+}
+
+.ataGlance dl > div:last-child {
+  border-bottom: none;
+}
+
+.ataGlance dt {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ataGlance dd {
+  font-weight: 700;
+  color: #111;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.specsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 0;
+  border-top: 1px solid #2a2a2a;
+}
+
+.specRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #2a2a2a;
+  border-right: 1px solid #2a2a2a;
+  gap: 1rem;
+}
+
+.specKey {
+  color: #aaa;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.specValue {
+  color: #fff;
+  font-weight: 700;
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.ctaBanner {
+  background: linear-gradient(135deg, var(--accent-red) 0%, #8d1117 100%);
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 0;
+}
+
+.ctaTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.ctaSubtext {
+  color: rgba(255,255,255,0.92);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.ctaActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaBanner .primaryBtn {
+  background: #111;
+}
+
+.ctaBanner .primaryBtn:hover {
+  background: #000;
+}
+
+@media (max-width: 900px) {
+  .productLayout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .descriptionGrid {
+    grid-template-columns: 1fr;
+  }
+  .specRow {
+    border-right: none;
+  }
+}
