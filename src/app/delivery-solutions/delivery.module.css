@@ -1,0 +1,448 @@
+.hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+  background: #000;
+}
+
+.heroImage {
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(110deg, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.65) 55%, rgba(0,0,0,0.35) 100%);
+}
+
+.heroInner {
+  position: relative;
+  z-index: 2;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  color: var(--accent-red);
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.heroTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+.heroTitle span {
+  color: var(--accent-red);
+}
+
+.heroSubtitle {
+  color: #e8e8e8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 680px;
+  margin-bottom: 2rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnGhost,
+.btnGhostDark,
+.btnOutlineWhite {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.9rem 1.6rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btnPrimary {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: #fff;
+}
+
+.btnPrimary:hover {
+  background: var(--accent-red-hover);
+  border-color: var(--accent-red-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btnGhost {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btnGhost:hover {
+  background: #fff;
+  color: #111;
+}
+
+.btnGhostDark {
+  background: transparent;
+  border-color: #111;
+  color: #111;
+}
+
+.btnGhostDark:hover {
+  background: #111;
+  color: #fff;
+}
+
+.btnOutlineWhite {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.btnOutlineWhite:hover {
+  background: #fff;
+  color: #111;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.sectionGrey {
+  background: #f4f4f4;
+}
+
+.sectionDark {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 0.75rem;
+}
+
+.eyebrowLight {
+  display: inline-block;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle span {
+  color: var(--accent-red);
+}
+
+.sectionTitleLight {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.sectionTitleLight span {
+  color: var(--accent-red);
+}
+
+.lead {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 760px;
+  margin-bottom: 3rem;
+}
+
+.splitHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Bikes grid */
+.bikesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.bikeCard {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-top: 4px solid var(--accent-red);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bikeCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-red);
+}
+
+.bikeImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #fff;
+  overflow: hidden;
+}
+
+.bikeBody {
+  padding: 1.25rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.bikeCategory {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+.bikeTitle {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.bikePrice {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+
+.bikeActions {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-top: 0.85rem;
+}
+
+.btnSmallRed,
+.btnSmallGreen {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btnSmallRed {
+  background: var(--accent-red);
+  color: #fff;
+}
+
+.btnSmallRed:hover {
+  background: var(--accent-red-hover);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btnSmallGreen {
+  background: #25D366;
+  color: #fff;
+}
+
+.btnSmallGreen:hover {
+  background: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Branding panel */
+.brandingPanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid var(--accent-red);
+}
+
+.brandingText {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brandingText p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.brandingList {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.brandingList li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.brandingList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 7px;
+  height: 7px;
+  background: var(--accent-red);
+  transform: rotate(45deg);
+}
+
+.brandingActions {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.brandingImage {
+  position: relative;
+  min-height: 320px;
+  background: #111;
+}
+
+/* Benefits */
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 4px solid var(--accent-red);
+  padding: 1.5rem;
+}
+
+.benefitNumber {
+  display: block;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  color: var(--accent-red);
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
+.benefit h3 {
+  margin: 0.6rem 0 0.4rem;
+  font-size: 1.05rem;
+  color: #111;
+  text-transform: uppercase;
+  font-family: var(--font-racing);
+  font-style: italic;
+}
+
+.benefit p {
+  color: #555;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .brandingPanel {
+    grid-template-columns: 1fr;
+  }
+  .brandingImage {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroInner {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .section {
+    padding: 3.5rem 0;
+  }
+}

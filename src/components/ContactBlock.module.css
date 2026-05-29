@@ -1,0 +1,92 @@
+.block {
+  display: grid;
+  gap: 1rem;
+  color: #111;
+}
+
+.block.dark {
+  color: #f1f1f1;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px dashed #ddd;
+  align-items: start;
+}
+
+.block.dark .row {
+  border-bottom-color: #2a2a2a;
+}
+
+.label {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777;
+  padding-top: 2px;
+}
+
+.block.dark .label {
+  color: #aaa;
+}
+
+.value {
+  font-weight: 700;
+  color: #111;
+  line-height: 1.45;
+  word-break: break-word;
+}
+
+.block.dark .value {
+  color: #fff;
+}
+
+a.value {
+  color: var(--accent-red);
+}
+
+a.value:hover {
+  color: var(--accent-red-hover);
+}
+
+.whatsapp {
+  color: #25D366 !important;
+}
+
+.whatsapp:hover {
+  color: #1ebe57 !important;
+}
+
+.hours {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  padding-top: 0.25rem;
+}
+
+.hours ul {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.hours li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: #222;
+}
+
+.block.dark .hours li {
+  color: #ddd;
+}
+
+.hoursTime {
+  font-weight: 700;
+}

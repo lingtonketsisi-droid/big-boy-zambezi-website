@@ -1,10 +1,12 @@
+import { PRODUCT_IMAGES } from "./images";
+
 export const mustang250 = {
   brand: "BigBoy",
   name: "Mustang 250",
   category: "Commuters",
   price: "R36,999.00",
   inStock: true,
-  image: "https://bigboyfourways.co.za/wp-content/uploads/2023/06/MUSTANG-250-1.jpg",
+  image: PRODUCT_IMAGES["big-boy-mustang-250"],
   tagline: "Chrome-covered midnight black cruiser styling, 250cc 4-stroke power.",
   description: [
     "The BigBoy Mustang 250 is a 250cc 4-stroke cruiser-styled commuter built for South African roads. Its chrome-covered, midnight black look brings genuine cruiser presence, while the proven single-cylinder 4-stroke engine is comfortable enough for daily commuting — including highway use at recommended cruising speed.",

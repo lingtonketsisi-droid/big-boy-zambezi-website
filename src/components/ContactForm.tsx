@@ -4,6 +4,19 @@ import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import styles from "./ContactForm.module.css";
 
+const ENQUIRY_OPTIONS = [
+  { value: "", label: "Select an enquiry type…" },
+  { value: "bike-sales", label: "Bike Sales" },
+  { value: "bike-service", label: "Bike Service" },
+  { value: "repairs", label: "Repairs" },
+  { value: "tuning-performance", label: "Tuning / Performance" },
+  { value: "restoration", label: "Restoration" },
+  { value: "parts", label: "Parts & Accessories" },
+  { value: "delivery-solutions", label: "Delivery Bike Solutions" },
+  { value: "branding-stickers", label: "Branding / Stickers" },
+  { value: "other", label: "Other" },
+];
+
 function buildInitialMessage(bikeName: string | null): string {
   if (!bikeName) return "";
   return `I am interested in the ${bikeName}. Please provide more information.`;
@@ -18,6 +31,7 @@ function ContactFormInner() {
     name: "",
     phone: "",
     email: "",
+    enquiry: bikeName ? "bike-sales" : "",
     message: buildInitialMessage(bikeName),
   }));
   const [submitted, setSubmitted] = useState(false);
@@ -27,6 +41,7 @@ function ContactFormInner() {
     setTrackedBike(bikeName);
     setFormData((prev) => ({
       ...prev,
+      enquiry: prev.enquiry || (bikeName ? "bike-sales" : ""),
       message: buildInitialMessage(bikeName) || prev.message,
     }));
   }
@@ -39,6 +54,7 @@ function ContactFormInner() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = "Email is invalid";
     }
+    if (!formData.enquiry) newErrors.enquiry = "Please choose an enquiry type";
     if (!formData.message) newErrors.message = "Message is required";
 
     setErrors(newErrors);
@@ -46,7 +62,10 @@ function ContactFormInner() {
   };
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+      | React.ChangeEvent<HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -67,7 +86,7 @@ function ContactFormInner() {
         e.preventDefault();
         if (validate()) {
           setSubmitted(true);
-          setFormData({ name: "", phone: "", email: "", message: "" });
+          setFormData({ name: "", phone: "", email: "", enquiry: "", message: "" });
           window.setTimeout(() => setSubmitted(false), 5000);
         }
       }}
@@ -123,6 +142,24 @@ function ContactFormInner() {
       </div>
 
       <div className="form-group">
+        <label className="form-label" htmlFor="enquiry">Enquiry Type *</label>
+        <select
+          id="enquiry"
+          name="enquiry"
+          className={`form-control ${errors.enquiry ? "error" : ""}`}
+          value={formData.enquiry}
+          onChange={handleChange}
+        >
+          {ENQUIRY_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value} disabled={opt.value === ""}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+        {errors.enquiry && <p className={styles.errorMessage}>{errors.enquiry}</p>}
+      </div>
+
+      <div className="form-group">
         <label className="form-label" htmlFor="message">Message *</label>
         <textarea
           id="message"
@@ -145,7 +182,7 @@ function ContactFormInner() {
 
 export default function ContactForm() {
   return (
-    <Suspense fallback={<div>Loading form...</div>}>
+    <Suspense fallback={<div>Loading form…</div>}>
       <ContactFormInner />
     </Suspense>
   );

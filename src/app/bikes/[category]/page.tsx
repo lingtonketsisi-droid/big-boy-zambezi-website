@@ -65,6 +65,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
             price={product.price}
             imageSrc={product.image}
             slug={product.slug}
+            badges={product.badges}
+            inStock={product.inStock}
+            href={product.slug === "big-boy-mustang-250" ? "/bikes/mustang-250" : undefined}
           />
         ))}
         {filteredProducts.length === 0 && (

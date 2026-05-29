@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Exo_2 } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import CategoryStrip from "@/components/CategoryStrip";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${exo2.variable}`} suppressHydrationWarning>
       <body className={inter.className} suppressHydrationWarning>
         <Navbar />
+        <CategoryStrip />
         <main style={{ minHeight: "calc(100vh - 80px)" }}>
           {children}
         </main>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import ImageWithFallback from "@/components/ImageWithFallback";
+import PDIBadge from "@/components/PDIBadge";
 import { mustang250 } from "@/data/mustang250";
 import { PHONE_DISPLAY, PHONE_TEL, waLink } from "@/data/contact";
 import styles from "./mustang.module.css";
@@ -70,8 +71,12 @@ export default function Mustang250Page() {
               </div>
 
               <p className={styles.disclaimer}>
-                Prices exclude on-the-road costs (registration, licensing, delivery & admin fees).
+                Prices exclude on-the-road costs (registration, licensing, delivery &amp; admin fees) and PDI (R350).
               </p>
+
+              <div className={styles.pdiInline}>
+                <PDIBadge />
+              </div>
             </div>
           </div>
         </div>
@@ -113,6 +118,12 @@ export default function Mustang250Page() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className={styles.pdiBanner}>
+        <div className="container">
+          <PDIBadge variant="banner" />
         </div>
       </section>
 

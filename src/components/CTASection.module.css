@@ -1,0 +1,85 @@
+.banner {
+  background: linear-gradient(135deg, var(--accent-red) 0%, #8d1117 100%);
+  color: #fff;
+  padding: 4.5rem 0;
+  text-align: center;
+}
+
+.banner.dark {
+  background: #0f0f0f;
+}
+
+.title {
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 720px;
+  margin: 0 auto 1.75rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.95rem 1.7rem;
+  font-family: var(--font-racing);
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.95rem;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+
+.primaryBtn {
+  background: #111;
+  color: #fff;
+  border: 2px solid #111;
+}
+
+.primaryBtn:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.banner.dark .primaryBtn {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.banner.dark .primaryBtn:hover {
+  background: var(--accent-red-hover);
+  border-color: var(--accent-red-hover);
+}
+
+.whatsappBtn {
+  background: #25D366;
+  color: #fff;
+  border: 2px solid #25D366;
+}
+
+.whatsappBtn:hover {
+  background: #1ebe57;
+  border-color: #1ebe57;
+  color: #fff;
+  transform: translateY(-1px);
+}

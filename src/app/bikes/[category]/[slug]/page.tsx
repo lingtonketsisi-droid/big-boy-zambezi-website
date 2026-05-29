@@ -71,8 +71,20 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <h1 className={styles.title}>{product.name}</h1>
           <p className={styles.price}>{product.price}</p>
 
+          {product.badges.length > 0 && (
+            <div className={styles.badgeRow}>
+              {product.badges.map((b) => (
+                <span key={b} className={styles.badge}>{b}</span>
+              ))}
+            </div>
+          )}
+
+          {product.inStock && (
+            <p className={styles.stockLine}><span /> In Stock — viewing available now</p>
+          )}
+
           <p className={styles.disclaimer}>
-            Prices shown exclude on-the-road costs, including registration, licensing, delivery, and administration fees.
+            Prices exclude on-the-road costs (registration, licensing, delivery &amp; admin fees) and Pre-Delivery Inspection (R350).
           </p>
 
           <div className={styles.actions}>
@@ -95,6 +107,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 price={p.price}
                 imageSrc={p.image}
                 slug={p.slug}
+                badges={p.badges}
+                inStock={p.inStock}
               />
             ))}
           </div>
