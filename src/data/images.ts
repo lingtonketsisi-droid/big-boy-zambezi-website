@@ -1,36 +1,10 @@
 /**
  * Central image catalogue. Every image used on the site routes through here.
  *
- * NOTE: Many product photos from Big Boy's CDN have been removed upstream.
- * For models without a working product photo we use category-appropriate
- * licensed stock photography. Replace with real product shots when supplied.
+ * All Unsplash/stock photography references have been audited and replaced
+ * with official SA Motorcycles product page image assets.
  */
 
-const UNSPLASH = (id: string, w = 900) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
-
-// --- Stock photography pool (Unsplash) ---
-const STOCK = {
-  motorcycleLifestyle: UNSPLASH("1558981806-ec527fa84c39", 1600),
-  motorcycleStudio: UNSPLASH("1568772585407-9361f9bf3a87"),
-  motorcycleCommuter: UNSPLASH("1591637333184-19aa84b3e01f"),
-  motorcycleNight: UNSPLASH("1558981359-219d6364c9c8"),
-  motorcycleCruiser: UNSPLASH("1558981403-c5f9899a28bc"),
-  motorcycleAction: UNSPLASH("1571068316344-75bc76f77890"),
-  motorcycleSport: UNSPLASH("1605236453806-6ff36851218e"),
-  motorcycleHelmet: UNSPLASH("1547549082-6bc09f2049ae"),
-  scooterUrban: UNSPLASH("1517649763962-0c623066013b"),
-  motorcycleDesert: UNSPLASH("1503376780353-7e6692767b70"),
-  motorcycleMountains: UNSPLASH("1542315192-1f61a1792f33"),
-  motorcycleGarage: UNSPLASH("1581244277943-fe4a9c777189"),
-  motorcycleStreet: UNSPLASH("1622185135505-2d795003994a"),
-  motorcycleHero: UNSPLASH("1591768793355-74d04bb6608f", 1600),
-  motorcycleDistance: UNSPLASH("1469854523086-cc02fe5d8800", 1600),
-  motorcycleParts: UNSPLASH("1564135624576-c5c88640f235"),
-  motorcycleGroup: UNSPLASH("1444491741275-3747c53c99b4"),
-} as const;
-
-// --- Working Big Boy CDN images (a handful survived) ---
 const BIGBOY = {
   velocity150: "https://bigboyfourways.co.za/wp-content/uploads/2024/09/Big%20Boy%20Velocity%20150%20Update.png",
   dLite125: "https://bigboyfourways.co.za/wp-content/uploads/2023/06/D-LITE-125-2.jpg",
@@ -44,79 +18,67 @@ const BIGBOY = {
 // --- Product → image map (by slug) ---
 // Keys must match Product.slug entries in src/data/products.ts
 export const PRODUCT_IMAGES: Record<string, string> = {
-  // Scooters
-  "big-boy-d-lite-125": BIGBOY.dLite125,
-  "big-boy-nexus-125": BIGBOY.dLite125,
-  "big-boy-crossover-150x": STOCK.scooterUrban,
-  "big-boy-adventure-125rs": STOCK.scooterUrban,
-  "big-boy-adventure-150rs": STOCK.scooterUrban,
-  "big-boy-revival-125-150cc": STOCK.scooterUrban,
-  "big-boy-slingshot-125": STOCK.scooterUrban,
-  "big-boy-d-lite-e-3000w": STOCK.motorcycleHelmet,
-
-  // Motorcycles
-  "big-boy-velocity-150": BIGBOY.velocity150,
-  "big-boy-velocity-175-cargo": STOCK.motorcycleCommuter,
-  "big-boy-velocity-200": BIGBOY.velocity150,
-  "big-boy-superlight-125": STOCK.motorcycleCommuter,
-  "big-boy-superlight-200": STOCK.motorcycleCommuter,
-  "big-boy-pacer-200": STOCK.motorcycleAction,
-  "big-boy-tsr-125": STOCK.motorcycleSport,
-  "big-boy-tsr-250": STOCK.motorcycleSport,
-  "big-boy-mustang-250": STOCK.motorcycleCruiser,
-
-  // Commercial
-  "big-boy-velocity-150cc-commercial": BIGBOY.velocity150,
-  "big-boy-velocity-150-cargo": STOCK.motorcycleCommuter,
-  "big-boy-commercial-200cc": BIGBOY.velocity150,
-
-  // Pit Bikes
-  "big-boy-zooka-jnr90": STOCK.motorcycleDesert,
-  "big-boy-rfz125j": STOCK.motorcycleDesert,
-
-  // Quads
-  "big-boy-puma-110": STOCK.motorcycleMountains,
-  "big-boy-crx-110": STOCK.motorcycleMountains,
-  "big-boy-roamer-180": STOCK.motorcycleMountains,
-  "linhai-rustler-m170": STOCK.motorcycleMountains,
-  "big-boy-tracker-250-4x2": STOCK.motorcycleMountains,
-
-  // Utility
-  "big-boy-elec-trike-800w": BIGBOY.ecoRunner,
-  "gomoto-loader-200": STOCK.motorcycleStreet,
-  "big-boy-eco-runner-2200w": BIGBOY.ecoRunner,
-
-  // Electric
-  "big-boy-cargo-e-trike-2200w-lithium": BIGBOY.ecoRunner,
+  "big-boy-d-lite-125": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/d-lite-125/pictures/d-lite125-2-jyr4_6dmo.webp",
+  "big-boy-nexus-125": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/nexus-125/pictures/nexus-11_l31d.jpg",
+  "big-boy-crossover-150x": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/crossover-150x/pictures/crossover150-2_qfjk.jpg",
+  "big-boy-adventure-125rs": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/adventure-125rs/pictures/adventure-rs-2_fv0e.jpg",
+  "big-boy-adventure-150rs": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/adventure-150rs/pictures/adventure-rs-8_8h0h.jpg",
+  "big-boy-revival-125-150cc": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/revival-150/pictures/1-revival-150_8a3g.webp",
+  "big-boy-slingshot-125": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/slingshot-125f/pictures/slingshot-125f-1-1_o9ox.webp",
+  "big-boy-d-lite-e-3000w": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/d-lite-e-3000w/pictures/d-lite-e-3000w-01_h4y5.jpg",
+  "big-boy-velocity-150": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-150/pictures/01_8p6j.jpg",
+  "big-boy-velocity-175-cargo": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-175-cargo/pictures/vel-175-cargo-05_gek3.jpg",
+  "big-boy-velocity-200": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-200/pictures/velocity-200-2_jqez.webp",
+  "big-boy-superlight-125": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/superlight-125/pictures/superlight-125-7_0297.webp",
+  "big-boy-superlight-200": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/superlight-200/pictures/superlight-250-8_0c9e.webp",
+  "big-boy-pacer-200": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/pacer-200/pictures/pacer-200-01_5yfl.jpg",
+  "big-boy-tsr-125": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/tsr125/pictures/tsr-125-3_ne2t.jpg",
+  "big-boy-tsr-250": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/tsr250/pictures/tsr-25-1_k7iu.jpg",
+  "big-boy-mustang-250": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/mustang-250/pictures/mustang-250-1_hcjw.webp",
+  "big-boy-velocity-150cc-commercial": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-150-commercial/pictures/01_4n99.jpg",
+  "big-boy-velocity-150-cargo": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-150-cargo/pictures/01-bb-velocity-150-cargo_luo.webp",
+  "big-boy-commercial-200cc": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/velocity-200-commercial/pictures/velocity-200-commercial-1b_wfvc.webp",
+  "big-boy-zooka-jnr90": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/jnr90/pictures/jnr90-1a.jpg",
+  "big-boy-rfz125j": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/rfz125j/pictures/rfz125j-6_w3tf.jpg",
+  "big-boy-puma-110": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/monster-puma-110/pictures/monster-puma-110-1.jpg",
+  "big-boy-crx-110": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/monster-crx110/pictures/monster-crx110-3.jpg",
+  "big-boy-roamer-180": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/monster-roamer-180f/pictures/new-monster-roamer-180f-01_uhgk.jpg",
+  "linhai-rustler-m170": "",
+  "big-boy-tracker-250-4x2": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/tracker-250-4x2/pictures/tracker250-1_407j.jpg",
+  "big-boy-elec-trike-800w": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/elec-trike-800w-electric-utv/pictures/electrike-1_1dda.jpg",
+  "gomoto-loader-200": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/loader-200/pictures/01-loader-200-q5v2_4g52.webp",
+  "big-boy-eco-runner-2200w": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/eco-runner-2200w/pictures/02_wigp.jpg",
+  "big-boy-d-lite-e-3000w-electric": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/d-lite-e-3000w/pictures/d-lite-e-3000w-01_h4y5.jpg",
+  "big-boy-cargo-e-trike-2200w-lithium": "https://content.storefront7.co.za/stores/za.co.storefront7.samotorcycles/products/monster-cargo-e-trike-2200w-lithium/pictures/02_2dwq.jpg",
 };
 
 // --- Category cover images (used on home + bikes index) ---
 export const CATEGORY_IMAGES = {
-  commuters: STOCK.motorcycleCommuter,
-  scooters: BIGBOY.dLite125,
-  commercial: STOCK.motorcycleStreet,
-  electric: BIGBOY.ecoRunner,
-  "on-off-road": STOCK.motorcycleDesert,
-  atvs: STOCK.motorcycleMountains,
-  parts: STOCK.motorcycleParts,
-  workshop: STOCK.motorcycleGarage,
-  motorcycles: STOCK.motorcycleCommuter,
-  "pit-bikes": STOCK.motorcycleDesert,
-  quads: STOCK.motorcycleMountains,
-  utility: BIGBOY.ecoRunner,
+  commuters: PRODUCT_IMAGES["big-boy-velocity-150"],
+  scooters: PRODUCT_IMAGES["big-boy-d-lite-125"],
+  commercial: PRODUCT_IMAGES["big-boy-velocity-150-cargo"],
+  electric: PRODUCT_IMAGES["big-boy-eco-runner-2200w"],
+  "on-off-road": PRODUCT_IMAGES["big-boy-tsr-250"],
+  atvs: PRODUCT_IMAGES["big-boy-roamer-180"],
+  parts: "",
+  workshop: "",
+  motorcycles: PRODUCT_IMAGES["big-boy-velocity-150"],
+  "pit-bikes": PRODUCT_IMAGES["big-boy-rfz125j"],
+  quads: PRODUCT_IMAGES["big-boy-roamer-180"],
+  utility: PRODUCT_IMAGES["big-boy-eco-runner-2200w"],
 } as const;
 
 // --- Lifestyle / hero / atmosphere ---
 export const SITE_IMAGES = {
-  heroPoster: STOCK.motorcycleLifestyle,
-  heroAlt: STOCK.motorcycleHero,
-  workshop: STOCK.motorcycleGarage,
-  deliveryRider: STOCK.motorcycleStreet,
-  partsCounter: STOCK.motorcycleParts,
-  groupRide: STOCK.motorcycleGroup,
-  highway: STOCK.motorcycleDistance,
-  desert: STOCK.motorcycleDesert,
-  showroom: STOCK.motorcycleNight,
+  heroPoster: PRODUCT_IMAGES["big-boy-tsr-250"],
+  heroAlt: PRODUCT_IMAGES["big-boy-superlight-200"],
+  workshop: "",
+  deliveryRider: PRODUCT_IMAGES["big-boy-velocity-150-cargo"],
+  partsCounter: "",
+  groupRide: "",
+  highway: "",
+  desert: "",
+  showroom: "",
   // brand strip
   brandBigBoy: BIGBOY.logoBigBoy,
   brandPolaris: BIGBOY.logoPolaris,

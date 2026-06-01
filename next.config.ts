@@ -11,9 +11,9 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'content.storefront7.co.za',
         port: '',
-        pathname: '/**',
+        pathname: '/stores/za.co.storefront7.samotorcycles/**',
       },
     ],
   },
